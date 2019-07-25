@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2018",
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "api",
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

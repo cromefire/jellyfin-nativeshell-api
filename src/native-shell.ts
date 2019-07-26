@@ -3,7 +3,7 @@ import { FileSystem } from "./file-system";
 import { Awaited, FoundServer } from "./types";
 
 export interface NativeShell {
-    version: number;
+    apiVersion: number;
 
     AppHost: AppHost;
     FileSystem?: FileSystem;

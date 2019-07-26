@@ -12,8 +12,6 @@ import {
 } from "./types";
 
 export interface AppHost {
-    moreIcon: string;
-
     init(): Awaited<void>;
 
     getWindowState(): Awaited<WindowState>;
@@ -38,7 +36,6 @@ export interface AppHost {
 
     setTheme(themeSettings: ThemeSettings): Awaited<void>;
     setUserScalable(scalable: boolean): Awaited<void>;
-    deviceIconUrl(): Awaited<string | null>;
     getDefaultLayout(): Awaited<Layout>;
 
     getSyncProfile(

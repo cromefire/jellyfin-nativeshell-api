@@ -7,15 +7,11 @@ import {
     Layout,
     MediaItem,
     Profile,
-    ThemeSettings,
-    WindowState
+    ThemeSettings
 } from "./types";
 
 export interface AppHost {
     init(): Awaited<void>;
-
-    getWindowState(): Awaited<WindowState>;
-    setWindowState(state: WindowState): Awaited<void>;
 
     supports(command: string): Awaited<boolean>;
     getCapabilities(): Awaited<Capabilities>;

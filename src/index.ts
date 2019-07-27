@@ -6,6 +6,9 @@ declare global {
     }
 }
 
+/**
+ * Registers the shell api with Jellyfin web
+ */
 export function registerApi(api: NativeShell) {
     window.NativeShell = api;
 }

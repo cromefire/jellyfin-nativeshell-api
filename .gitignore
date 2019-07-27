@@ -1,5 +1,11 @@
-node_modules
-yarn-error.log
+# Generated
 api
 docs
+
+# Package management
+node_modules
+yarn-error.log
+
+# Editors
 .idea
+.vscode

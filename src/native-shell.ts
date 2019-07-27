@@ -1,6 +1,7 @@
 import { AppHost } from "./app-host";
 import { FileSystem } from "./file-system";
 import { Player } from "./player";
+import { Sync } from "./sync";
 import { Awaited, FoundServer } from "./types";
 
 export interface NativeShell {
@@ -9,6 +10,7 @@ export interface NativeShell {
     appHost: AppHost;
     fileSystem?: FileSystem;
     player?: Player;
+    sync?: Sync;
 
     enableFullscreen(): void;
     disableFullscreen(): void;

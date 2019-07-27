@@ -46,9 +46,9 @@ export interface Codec {
 }
 
 /**
- * Info about a media file
+ * Info about a media file codecs
  */
-export interface MediaInfo {
+export interface MediaCodecInfo {
     container: string;
     video: Codec[];
     audio: Codec[];
@@ -87,3 +87,31 @@ export interface PreferredCodecs {
     audio: Codec[];
     subtitles: Codec[];
 }
+
+/**
+ * Unique id for a media item
+ *
+ * Todo: Does something like this even exist yet?
+ */
+export type MediaId = string;
+
+/**
+ * Describes whether a operation was successful
+ */
+export interface Success {
+    successful: boolean;
+    /**
+     * Message to be displayed to the user (e.g. "Device storage is full" in case of a failure)
+     */
+    message?: string;
+}
+
+/**
+ * Json object (not a string) that stores the media information (e.g. title, year, ...)
+ */
+export type MediaInfo = any;
+
+/**
+ * The url of the media to be downloaded, played, ...
+ */
+export type MediaUrl = string;

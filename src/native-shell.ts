@@ -12,10 +12,7 @@ export interface NativeShell {
     player?: Player;
     sync?: Sync;
 
-    enableFullscreen(): void;
-    disableFullscreen(): void;
-
-    getPlugins(): Awaited<string[]>;
-    findServers(timeout: number): Awaited<FoundServer[]>;
+    getPlugins(): Awaited<any[]>;
+    getServers(timeout: number): Awaited<FoundServer[]>;
     openUrl(url: string): void;
 }

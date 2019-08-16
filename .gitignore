@@ -1,3 +1,11 @@
+# Generated
+api
+docs
+
+# Package management
 node_modules
 yarn-error.log
-api
+
+# Editors
+.idea
+.vscode

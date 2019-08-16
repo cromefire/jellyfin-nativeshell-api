@@ -46,6 +46,8 @@ export interface Player {
     /**
      * Gets called before any of the "playback methods", e.g. directly after the user has clicked play
      *
+     * The media info is already on the client (saved with offline sync)
+     *
      * Only used when sync is enabled; The client is in charge of playing the file from the offline storage
      */
     load(type: PlaybackType.Offline, id: MediaId): Awaited<void>;
@@ -54,7 +56,11 @@ export interface Player {
      *
      * The file gets supplied using an url
      */
-    load(type: PlaybackType.Url, url: MediaUrl): Awaited<void>;
+    load(
+        type: PlaybackType.Url,
+        url: MediaUrl,
+        mediaInfo: MediaCodecInfo
+    ): Awaited<void>;
     /**
      * Gets called after the user has clicked back or the video has finished
      */
